@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80008B5121F5A24E0057DC4E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80008B5021F5A24E0057DC4E /* TableViewController.swift */; };
+		80008B5421F5A2EF0057DC4E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80008B5221F5A2EF0057DC4E /* TableViewCell.swift */; };
+		80008B5521F5A2EF0057DC4E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80008B5321F5A2EF0057DC4E /* TableViewCell.xib */; };
 		809F856421F199D80011551D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809F856321F199D80011551D /* AppDelegate.swift */; };
 		809F856621F199D80011551D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809F856521F199D80011551D /* ViewController.swift */; };
 		809F856921F199D80011551D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809F856721F199D80011551D /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80008B5021F5A24E0057DC4E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		80008B5221F5A2EF0057DC4E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		80008B5321F5A2EF0057DC4E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		809F856021F199D80011551D /* post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = post.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809F856321F199D80011551D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809F856521F199D80011551D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,9 @@
 				809F856321F199D80011551D /* AppDelegate.swift */,
 				809F856521F199D80011551D /* ViewController.swift */,
 				809F856721F199D80011551D /* Main.storyboard */,
+				80008B5221F5A2EF0057DC4E /* TableViewCell.swift */,
+				80008B5321F5A2EF0057DC4E /* TableViewCell.xib */,
+				80008B5021F5A24E0057DC4E /* TableViewController.swift */,
 				809F856A21F199D90011551D /* Assets.xcassets */,
 				809F856C21F199D90011551D /* LaunchScreen.storyboard */,
 				809F856F21F199D90011551D /* Info.plist */,
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				809F856E21F199D90011551D /* LaunchScreen.storyboard in Resources */,
+				80008B5521F5A2EF0057DC4E /* TableViewCell.xib in Resources */,
 				809F856B21F199D90011551D /* Assets.xcassets in Resources */,
 				809F856921F199D80011551D /* Main.storyboard in Resources */,
 			);
@@ -257,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				809F856621F199D80011551D /* ViewController.swift in Sources */,
+				80008B5421F5A2EF0057DC4E /* TableViewCell.swift in Sources */,
+				80008B5121F5A24E0057DC4E /* TableViewController.swift in Sources */,
 				809F856421F199D80011551D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
