@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label1: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +23,9 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func bindData(text: String) {
+    func bindData(text: String, text1: String) {
         label1.text = text
+        label2.text = text1
     }
     
 }

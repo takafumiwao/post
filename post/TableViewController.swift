@@ -12,36 +12,49 @@ class TableViewController: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     
+    var articles: [[String: Any]] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableview.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         
-        let url: URL = URL(string: "https://3e5c3c57.ngrok.io/getjson/")!
+        let url: URL = URL(string: "https://fcbe6b4d.ngrok.io/getjson/")!
         let task: URLSessionTask = URLSession.shared.dataTask(with: url, completionHandler: {data, response, error in
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! [Any]
-                print(json)
+                let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) as! Dictionary<String,AnyObject>
+                let jsonname = json["friend"] as! [Any]
+                let articles = jsonname.map { (article) -> [String: Any] in
+                    return article as! [String: Any]
+                }
+                DispatchQueue.main.async() { () -> Void in
+                    self.articles = articles
                 
+                    self.tableview.reloadData()
+                }
             }
             catch {
                 print(error)
             }
         })
         task.resume() //実行する
+        
     }
+    
 
 }
 
 extension TableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     //セクションの個数を返す
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        
+        return articles.count
+        
     }
     
     
@@ -49,7 +62,10 @@ extension TableViewController: UITableViewDataSource {
     //セルの中身を返す
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
-        cell.bindData(text: "section: \(indexPath.section) index: \(indexPath.row)")
+        let article = articles[indexPath.section]
+        let title1 = article["name"] as! String
+        let title2 = article["text"] as! String
+        cell.bindData(text: "\(title1)", text1: "\(title2)")
         return cell
     }
     

@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     @IBAction func post(_ sender: UIButton) {
-        let urlString = "https://3e5c3c57.ngrok.io/getpost/"
+        let urlString = "https://fcbe6b4d.ngrok.io/getpost/"
         let request =  NSMutableURLRequest(url: URL(string: urlString)!)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
